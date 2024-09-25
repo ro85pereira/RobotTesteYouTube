@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.4 on win32)" generated="2024-09-25T17:51:25.676194" rpa="false" schemaversion="5">
+<suite id="s1" name="BDD" source="C:\Users\RR\Documents\Rodrigo\Cursos Rodrigo\Robot\BDD.robot">
+<test id="s1-t1" name="Cenário 1: Executar video no youtube" line="35">
+<kw name="Dado que o usuário acesse o site do youtube">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-25T17:51:25.961010" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-25T17:51:25.960013" elapsed="5.131356"/>
+</kw>
+<status status="PASS" start="2024-09-25T17:51:25.960013" elapsed="5.132353"/>
+</kw>
+<kw name="Quando digitar o nome de um vídeo">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-25T17:51:31.095887" level="INFO">Typing text 'aprenda robot framework' into text field '//input[@id="search"]'.</msg>
+<arg>${input_pesquisar}</arg>
+<arg>${Busca}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-25T17:51:31.094361" elapsed="0.433959"/>
+</kw>
+<status status="PASS" start="2024-09-25T17:51:31.094361" elapsed="0.434954"/>
+</kw>
+<kw name="E clicar no botão buscar">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-25T17:51:31.530315" level="INFO">Clicking element '//button[@id="search-icon-legacy"]'.</msg>
+<arg>${button_pesquisar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-25T17:51:31.530315" elapsed="0.185635"/>
+</kw>
+<status status="PASS" start="2024-09-25T17:51:31.529315" elapsed="0.187633"/>
+</kw>
+<kw name="E clicar na primeira opção da lista">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${item_lista}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-25T17:51:31.717945" elapsed="1.916551"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-25T17:51:33.635485" level="INFO">Clicking element '(//yt-formatted-string[@class="style-scope ytd-video-renderer"])[3]'.</msg>
+<arg>${item_lista}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-25T17:51:33.635485" elapsed="0.278225"/>
+</kw>
+<status status="PASS" start="2024-09-25T17:51:31.717945" elapsed="2.195765"/>
+</kw>
+<kw name="Então o vídeo será executado">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Prova}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-25T17:51:33.916700" elapsed="1.323797"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-25T17:51:35.565952" level="INFO">Element '//div[@id="info-container"]' is displayed.</msg>
+<arg>${Prova}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-25T17:51:35.240497" elapsed="0.325455"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-25T17:51:45.567145" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-25T17:51:35.566950" elapsed="10.000195"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-25T17:51:45.567145" elapsed="2.356709"/>
+</kw>
+<status status="PASS" start="2024-09-25T17:51:33.916700" elapsed="14.007154"/>
+</kw>
+<status status="PASS" start="2024-09-25T17:51:25.959013" elapsed="21.966045"/>
+</test>
+<status status="PASS" start="2024-09-25T17:51:25.676194" elapsed="22.251011"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="BDD">BDD</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
